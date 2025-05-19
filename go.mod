@@ -2,7 +2,10 @@ module github.com/ntnn/kcp-cbor-proto-tester
 
 go 1.24.0
 
-require k8s.io/client-go v0.33.1
+require (
+	k8s.io/apimachinery v0.33.1
+	k8s.io/client-go v0.33.1
+)
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -36,7 +39,6 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/api v0.33.1 // indirect
-	k8s.io/apimachinery v0.33.1 // indirect
 	k8s.io/klog/v2 v2.130.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20250318190949-c8a335a9a2ff // indirect
 	k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738 // indirect
