@@ -42,8 +42,10 @@ func createClient(path string) (*kubernetes.Clientset, error) {
 		return nil, fmt.Errorf("failed to load kubeconfig: %w", err)
 	}
 
-	config.ContentConfig.AcceptContentTypes = "application/cbor"
-	config.ContentConfig.ContentType = "application/cbor"
+	// config.ContentConfig.AcceptContentTypes = "application/cbor"
+	// config.ContentConfig.ContentType = "application/cbor"
+	config.ContentConfig.AcceptContentTypes = "application/vnd.kubernetes.protobuf"
+	config.ContentConfig.ContentType = "application/vnd.kubernetes.protobuf"
 
 	// Create the Kubernetes client
 	clientset, err := kubernetes.NewForConfig(config)
